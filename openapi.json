@@ -1,5 +1,5 @@
 {
-  "openapi": "3.1.0",
+  "openapi": "3.0.0",
   "info": {
     "title": "Chart Logger API",
     "description": "Logs chart analysis to a spreadsheet.",
@@ -35,27 +35,45 @@
   },
   "components": {
     "schemas": {
-"ChartLog": {
-  "type": "object",
-  "properties": {
-    "date": { "type": "string" },
-    "symbol": { "type": "string" },
-    "clock": { "type": "string" },
-    ...
-    "fundamentals": {
-      "type": "object",
-      "properties": {
-        "performance": { "type": "string" },
-        "theme": { "type": "string" },
-        "float": { "type": "string" },
-        "margin": { "type": "string" },
-        "holder": { "type": "string" },
-        "event": { "type": "string" }
-      }
-    }
-  },
-  "required": [ "date", "symbol", "clock",
+      "ChartLog": {
+        "type": "object",
+        "properties": {
+          "date": { "type": "string" },
+          "symbol": { "type": "string" },
+          "clock": { "type": "string" },
+          "timeframe": { "type": "string" },
+          "trend_structure": { "type": "string" },
+          "moving_averages": { "type": "string" },
+          "rci_status": { "type": "string" },
+          "stochastics_status": { "type": "string" },
+          "volume_status": { "type": "string" },
+          "long_strategy": { "type": "string" },
+          "short_strategy": { "type": "string" },
+          "fundamentals": {
+            "type": "object",
+            "properties": {
+              "performance": { "type": "string" },
+              "theme": { "type": "string" },
+              "float": { "type": "string" },
+              "margin": { "type": "string" },
+              "holder": { "type": "string" },
+              "event": { "type": "string" }
+            },
+            "required": [
+              "performance",
+              "theme",
+              "float",
+              "margin",
+              "holder",
+              "event"
+            ]
+          },
+          "comment": { "type": "string" }
+        },
+        "required": [
+          "date",
           "symbol",
+          "clock",
           "timeframe",
           "trend_structure",
           "moving_averages",
