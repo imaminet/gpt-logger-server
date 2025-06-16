@@ -1,41 +1,52 @@
 {
-  "openapi": "3.0.0",
+  "openapi": "3.0.1",
   "info": {
     "title": "Chart Logger API",
-    "version": "1.0.0",
-    "description": "Submit chart analysis data to Google Sheets via POST"
+    "description": "Logs chart analysis to a spreadsheet.",
+    "version": "1.0.0"
   },
+  "servers": [
+    {
+      "url": "https://gpt-logger-server.onrender.com"
+    }
+  ],
   "paths": {
-    "/submitAnalysis": {
+    "/log": {
       "post": {
-        "summary": "Submit chart analysis data",
-        "operationId": "submitAnalysis",
+        "summary": "Log chart analysis",
+        "operationId": "logChartAnalysis",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "date": { "type": "string" },
-                  "time": { "type": "string" },
-                  "stockCode": { "type": "string" },
-                  "po": { "type": "string" },
-                  "rci": { "type": "string" },
-                  "stochastics": { "type": "string" },
-                  "volume": { "type": "string" },
-                  "comment": { "type": "string" },
-                  "weeklyChart": { "type": "string" },
-                  "dailyChart": { "type": "string" }
-                },
-                "required": ["date", "stockCode", "po", "rci"]
+                "$ref": "#/components/schemas/ChartLog"
               }
             }
           }
         },
         "responses": {
-          "200": { "description": "Data accepted" }
+          "200": {
+            "description": "Logged successfully"
+          }
         }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ChartLog": {
+        "type": "object",
+        "properties": {
+          "date": { "type": "string" },
+          "stockCode": { "type": "string" },
+          "po": { "type": "string" },
+          "rci": { "type": "string" },
+          "stochastics": { "type": "string" },
+          "volume": { "type": "string" },
+          "comment": { "type": "string" }
+        },
+        "required": ["date", "stockCode", "po", "rci", "stochastics", "volume", "comment"]
       }
     }
   }
