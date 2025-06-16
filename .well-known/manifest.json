@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "チャート分析記録アクション",
+  "name_for_model": "chartLogger",
+  "description_for_human": "チャート分析結果をスプレッドシートに記録します。",
+  "description_for_model": "チャートの分析データ（移動平均線、RCI、出来高など）を受け取り、Google Apps Script経由でGoogleスプレッドシートに記録します。",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://your-domain.com/.well-known/openapi.yaml"
+  },
+  "logo_url": "https://your-domain.com/logo.png",
+  "contact_email": "your@email.com",
+  "legal_info_url": "https://your-domain.com/legal"
+}
