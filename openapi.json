@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://gpt-logger-server.onrender.com"
+      "url": "https://gpt-logger-server.onrender.com/"
     }
   ],
   "paths": {
@@ -39,8 +39,8 @@
         "type": "object",
         "properties": {
           "date": { "type": "string" },
-          "symbol": { "type": "string" },
           "clock": { "type": "string" },
+          "symbol": { "type": "string" },
           "timeframe": { "type": "string" },
           "trend_structure": { "type": "string" },
           "moving_averages": { "type": "string" },
@@ -49,41 +49,19 @@
           "volume_status": { "type": "string" },
           "long_strategy": { "type": "string" },
           "short_strategy": { "type": "string" },
-          "fundamentals": {
-            "type": "object",
-            "properties": {
-              "performance": { "type": "string" },
-              "theme": { "type": "string" },
-              "float": { "type": "string" },
-              "margin": { "type": "string" },
-              "holder": { "type": "string" },
-              "event": { "type": "string" }
-            },
-            "required": [
-              "performance",
-              "theme",
-              "float",
-              "margin",
-              "holder",
-              "event"
-            ]
-          },
+          "performance": { "type": "string" },
+          "theme": { "type": "string" },
+          "float": { "type": "string" },
+          "margin": { "type": "string" },
+          "holder": { "type": "string" },
+          "event": { "type": "string" },
           "comment": { "type": "string" }
         },
         "required": [
-          "date",
-          "symbol",
-          "clock",
-          "timeframe",
-          "trend_structure",
-          "moving_averages",
-          "rci_status",
-          "stochastics_status",
-          "volume_status",
-          "long_strategy",
-          "short_strategy",
-          "fundamentals",
-          "comment"
+          "date", "clock", "symbol", "timeframe", "trend_structure",
+          "moving_averages", "rci_status", "stochastics_status", "volume_status",
+          "long_strategy", "short_strategy", "performance", "theme", "float",
+          "margin", "holder", "event", "comment"
         ]
       }
     }
