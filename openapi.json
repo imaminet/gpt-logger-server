@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.1.0",
   "info": {
     "title": "Chart Logger API",
     "description": "Logs chart analysis to a spreadsheet.",
