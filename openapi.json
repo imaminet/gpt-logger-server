@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://gpt-logger-server.onrender.com"
+      "url": "https://gpt-logger-server.onrender.com/"
     }
   ],
   "paths": {
@@ -39,14 +39,34 @@
         "type": "object",
         "properties": {
           "date": { "type": "string" },
-          "stockCode": { "type": "string" },
-          "po": { "type": "string" },
-          "rci": { "type": "string" },
-          "stochastics": { "type": "string" },
-          "volume": { "type": "string" },
+          "time": { "type": "string" },
+          "symbol": { "type": "string" },
+          "timeframe": { "type": "string" },
+          "trend_structure": { "type": "string" },
+          "moving_averages": { "type": "string" },
+          "rci_status": { "type": "string" },
+          "stochastics_status": { "type": "string" },
+          "volume_status": { "type": "string" },
+          "long_strategy": { "type": "string" },
+          "short_strategy": { "type": "string" },
+          "fundamentals": { "type": "string" },
           "comment": { "type": "string" }
         },
-        "required": ["date", "stockCode", "po", "rci", "stochastics", "volume", "comment"]
+        "required": [
+          "date",
+          "time",
+          "symbol",
+          "timeframe",
+          "trend_structure",
+          "moving_averages",
+          "rci_status",
+          "stochastics_status",
+          "volume_status",
+          "long_strategy",
+          "short_strategy",
+          "fundamentals",
+          "comment"
+        ]
       }
     }
   }
