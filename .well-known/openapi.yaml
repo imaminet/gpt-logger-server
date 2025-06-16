@@ -1,0 +1,58 @@
+openapi: 3.0.1
+info:
+  title: チャート分析記録API
+  description: チャート分析結果をスプレッドシートに記録するためのAPI
+  version: 1.0.0
+paths:
+  /log:
+    post:
+      summary: 分析データの送信
+      operationId: sendChartData
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ChartData"
+      responses:
+        '200':
+          description: 成功
+components:
+  schemas:
+    ChartData:
+      type: object
+      properties:
+        date:
+          type: string
+        stockCode:
+          type: string
+        timeFrame:
+          type: string
+        trendStructure:
+          type: string
+        movingAverages:
+          type: string
+        rci:
+          type: string
+        stochastics:
+          type: string
+        volume:
+          type: string
+        longComment:
+          type: string
+        shortComment:
+          type: string
+        earningsTrend:
+          type: string
+        growthTheme:
+          type: string
+        floatStock:
+          type: string
+        marginBalance:
+          type: string
+        majorShareholders:
+          type: string
+        eventSchedule:
+          type: string
+        comment:
+          type: string
