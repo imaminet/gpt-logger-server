@@ -10,12 +10,6 @@ app.post("/log", (req, res) => {
   res.status(200).send({ message: "Logged successfully" });
 });
 
-app.post("/submitAnalysis", (req, res) => {
-  console.log("Received analysis:", req.body);
-  res.json({ status: "ok" });
-});
-
-
 app.get("/openapi.json", (req, res) => {
   res.sendFile(path.join(__dirname, "openapi.json"));
 });
