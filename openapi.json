@@ -35,35 +35,49 @@
   },
   "components": {
     "schemas": {
-      "ChartLog": {
-        "type": "object",
-        "properties": {
-          "date": { "type": "string" },
-          "clock": { "type": "string" },
-          "symbol": { "type": "string" },
-          "timeframe": { "type": "string" },
-          "trend_structure": { "type": "string" },
-          "moving_averages": { "type": "string" },
-          "rci_status": { "type": "string" },
-          "stochastics_status": { "type": "string" },
-          "volume_status": { "type": "string" },
-          "long_strategy": { "type": "string" },
-          "short_strategy": { "type": "string" },
-          "performance": { "type": "string" },
-          "theme": { "type": "string" },
-          "float": { "type": "string" },
-          "margin": { "type": "string" },
-          "holder": { "type": "string" },
-          "event": { "type": "string" },
-          "comment": { "type": "string" }
-        },
-        "required": [
-          "date", "clock", "symbol", "timeframe", "trend_structure",
-          "moving_averages", "rci_status", "stochastics_status", "volume_status",
-          "long_strategy", "short_strategy", "performance", "theme", "float",
-          "margin", "holder", "event", "comment"
-        ]
-      }
+"ChartLog": {
+  "type": "object",
+  "properties": {
+    "date": { "type": "string" },
+    "clock": { "type": "string" },
+    "symbol": { "type": "string" },
+    "timeframe": { "type": "string" },
+    "trend_structure": { "type": "string" },
+    "moving_averages": { "type": "string" },
+    "rci_status": { "type": "string" },
+    "stochastics_status": { "type": "string" },
+    "volume_status": { "type": "string" },
+    "candle_shape": { "type": "string" },
+    "support_resistance": { "type": "string" },
+    "gap_info": { "type": "string" },
+    "volatility": { "type": "string" },
+    "ma_deviation": { "type": "string" },
+    "long_entry": { "type": "string" },
+    "long_tp": { "type": "string" },
+    "long_sl": { "type": "string" },
+    "short_entry": { "type": "string" },
+    "short_tp": { "type": "string" },
+    "short_sl": { "type": "string" },
+    "long_strategy": { "type": "string" },
+    "short_strategy": { "type": "string" },
+    "performance": { "type": "string" },
+    "theme": { "type": "string" },
+    "float": { "type": "string" },
+    "margin": { "type": "string" },
+    "holder": { "type": "string" },
+    "event": { "type": "string" },
+    "comment": { "type": "string" }
+  },
+  "required": [
+    "date", "clock", "symbol", "timeframe", "trend_structure",
+    "moving_averages", "rci_status", "stochastics_status", "volume_status",
+    "candle_shape", "support_resistance", "gap_info", "volatility", "ma_deviation",
+    "long_entry", "long_tp", "long_sl", "short_entry", "short_tp", "short_sl",
+    "long_strategy", "short_strategy", "performance", "theme", "float",
+    "margin", "holder", "event", "comment"
+  ]
+}
+
     }
   }
 }
