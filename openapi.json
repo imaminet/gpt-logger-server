@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://gpt-logger-server.onrender.com"
+      "url": "https://gpt-logger-server.onrender.com/"
     }
   ],
   "paths": {
