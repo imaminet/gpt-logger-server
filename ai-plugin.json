@@ -1,0 +1,15 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Chart Logger",
+  "name_for_model": "chartLogger",
+  "description_for_human": "株式分析データをスプレッドシートに記録するプラグイン",
+  "description_for_model": "Use this plugin to automatically log chart analysis via POST.",
+  "auth": { "type": "none" },
+  "api": {
+    "type": "openapi",
+    "url": "https://your-render-subdomain.onrender.com/openapi.json"
+  },
+  "logo_url": "https://your-render-subdomain.onrender.com/logo.png",
+  "contact_email": "taka@example.com",
+  "legal_info_url": "https://example.com"
+}
