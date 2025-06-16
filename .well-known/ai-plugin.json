@@ -1,5 +1,5 @@
 {
-  "schema_version": "v1",
+  "schema_version": "1.0",
   "name_for_human": "Chart Logger",
   "name_for_model": "chart_logger",
   "description_for_human": "株式分析データをスプレッドシートに記録するプラグイン。",
@@ -13,5 +13,5 @@
   },
   "logo_url": "https://gpt-logger-server.onrender.com/logo.png",
   "contact_email": "taka.19831111@example.com",
-  "legal_info_url": "https://github.com/imaninet/gpt-logger-server"
+  "legal_info_url": "https://github.com/imaminet/gpt-logger-server"
 }
