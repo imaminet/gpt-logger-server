@@ -1,0 +1,42 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Chart Logger API",
+    "version": "1.0.0",
+    "description": "Submit chart analysis data to Google Sheets via POST"
+  },
+  "paths": {
+    "/submitAnalysis": {
+      "post": {
+        "summary": "Submit chart analysis data",
+        "operationId": "submitAnalysis",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "date": { "type": "string" },
+                  "time": { "type": "string" },
+                  "stockCode": { "type": "string" },
+                  "po": { "type": "string" },
+                  "rci": { "type": "string" },
+                  "stochastics": { "type": "string" },
+                  "volume": { "type": "string" },
+                  "comment": { "type": "string" },
+                  "weeklyChart": { "type": "string" },
+                  "dailyChart": { "type": "string" }
+                },
+                "required": ["date", "stockCode", "po", "rci"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Data accepted" }
+        }
+      }
+    }
+  }
+}
