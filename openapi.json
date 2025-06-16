@@ -35,26 +35,26 @@
   },
   "components": {
     "schemas": {
-      "ChartLog": {
-        "type": "object",
-        "properties": {
-          "date": { "type": "string" },
-          "clock": { "type": "string" },
-          "symbol": { "type": "string" },
-          "timeframe": { "type": "string" },
-          "trend_structure": { "type": "string" },
-          "moving_averages": { "type": "string" },
-          "rci_status": { "type": "string" },
-          "stochastics_status": { "type": "string" },
-          "volume_status": { "type": "string" },
-          "long_strategy": { "type": "string" },
-          "short_strategy": { "type": "string" },
-          "fundamentals": { "type": "string" },
-          "comment": { "type": "string" }
-        },
-        "required": [
-          "date",
-          "clock",
+"ChartLog": {
+  "type": "object",
+  "properties": {
+    "date": { "type": "string" },
+    "symbol": { "type": "string" },
+    "clock": { "type": "string" },
+    ...
+    "fundamentals": {
+      "type": "object",
+      "properties": {
+        "performance": { "type": "string" },
+        "theme": { "type": "string" },
+        "float": { "type": "string" },
+        "margin": { "type": "string" },
+        "holder": { "type": "string" },
+        "event": { "type": "string" }
+      }
+    }
+  },
+  "required": [ "date", "symbol", "clock",
           "symbol",
           "timeframe",
           "trend_structure",
