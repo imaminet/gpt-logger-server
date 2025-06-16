@@ -11,7 +11,7 @@ app.post("/log", async (req, res) => {
   console.log("Received chart log:", data);
 
   try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbyjqG8HNeIYHgayz7VrjhAMv4RjyPi6qZ8oN6kdORe8vvG7nWT6HCbKvUXGThD1w-FeMw/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbxbP9je7IEMrFthE8GjXBcWWO5uSiL49dK91FQVE0w1Rqz7aYQIg2waheT0aszBAVJngQ/exec", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
